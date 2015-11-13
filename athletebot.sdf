@@ -1,6 +1,6 @@
 <?xml version='1.0'?>
 <sdf version='1.5'>
-  <model name='ATHLETE_ROBOT_CY'>
+  <model name='athletebot'>
     <pose>0 0 0.7 1.57 -0 0</pose>
     <link name='trunk'>
       <pose>0 0 0 0 -0 0</pose>
@@ -21,7 +21,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://athletebot/athlete_robot_cy_simple/trunk_all_asm.stl</uri>
+            <uri>model://athletebot/meshes/trunk_all_asm.stl</uri>
           </mesh>
         </geometry>
         <surface>
@@ -38,7 +38,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://athletebot/athlete_robot_cy_simple/trunk_all_asm.stl</uri>
+            <uri>model://athletebot/meshes/trunk_all_asm.stl</uri>
           </mesh>
         </geometry>
       </visual>
@@ -70,7 +70,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://athletebot/athlete_robot_cy_simple/l_hip_in_upper_prt.stl</uri>
+            <uri>model://athletebot/meshes/l_hip_in_upper_prt.stl</uri>
           </mesh>
         </geometry>
       </collision>
@@ -79,7 +79,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://athletebot/athlete_robot_cy_simple/ftsensor45a_asm.stl</uri>
+            <uri>model://athletebot/meshes/ftsensor45a_asm.stl</uri>
           </mesh>
         </geometry>
       </collision>
@@ -88,7 +88,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://athletebot/athlete_robot_cy_simple/l_hip_in_lower_part_prt.stl</uri>
+            <uri>model://athletebot/meshes/l_hip_in_lower_part_prt.stl</uri>
           </mesh>
         </geometry>
       </collision>
@@ -97,7 +97,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://athletebot/athlete_robot_cy_simple/l_hip_in_upper_prt.stl</uri>
+            <uri>model://athletebot/meshes/l_hip_in_upper_prt.stl</uri>
           </mesh>
         </geometry>
       </visual>
@@ -106,7 +106,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://athletebot/athlete_robot_cy_simple/ftsensor45a_asm.stl</uri>
+            <uri>model://athletebot/meshes/ftsensor45a_asm.stl</uri>
           </mesh>
         </geometry>
       </visual>
@@ -115,7 +115,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://athletebot/athlete_robot_cy_simple/l_hip_in_lower_part_prt.stl</uri>
+            <uri>model://athletebot/meshes/l_hip_in_lower_part_prt.stl</uri>
           </mesh>
         </geometry>
       </visual>
@@ -126,8 +126,8 @@
       <axis>
         <xyz>1.46246e-13 -1.46246e-13 -1</xyz>
         <limit>
-          <lower>-1e+16</lower>
-          <upper>1e+16</upper>
+          <lower>-1.57</lower>
+          <upper>1.57</upper>
         </limit>
         <dynamics>
           <damping>0.1</damping>
@@ -157,7 +157,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://athletebot/athlete_robot_cy_simple/l_thigh_asm.stl</uri>
+            <uri>model://athletebot/meshes/l_thigh_asm.stl</uri>
           </mesh>
         </geometry>
       </collision>
@@ -166,7 +166,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://athletebot/athlete_robot_cy_simple/l_thigh_asm.stl</uri>
+            <uri>model://athletebot/meshes/l_thigh_asm.stl</uri>
           </mesh>
         </geometry>
       </visual>
@@ -210,7 +210,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://athletebot/athlete_robot_cy_simple/l_shank_asm.stl</uri>
+            <uri>model://athletebot/meshes/l_shank_asm.stl</uri>
           </mesh>
         </geometry>
       </collision>
@@ -219,7 +219,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://athletebot/athlete_robot_cy_simple/l_shank_asm.stl</uri>
+            <uri>model://athletebot/meshes/l_shank_asm.stl</uri>
           </mesh>
         </geometry>
       </visual>
@@ -250,12 +250,12 @@
         <pose>-0.0472636 0.0354762 0.115935 0 -0 0</pose>
         <mass>0.122842</mass>
         <inertia>
-          <ixx>7.60181e-05</ixx>
+          <ixx>7.60181e-04</ixx>
           <ixy>7.85001e-06</ixy>
           <ixz>-2.08089e-08</ixz>
-          <iyy>3.11261e-05</iyy>
+          <iyy>3.11261e-04</iyy>
           <iyz>3.75761e-08</iyz>
-          <izz>7.00553e-05</izz>
+          <izz>7.00553e-04</izz>
         </inertia>
       </inertial>
       <collision name='l_foot_collision'>
@@ -263,7 +263,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://athletebot/athlete_robot_cy_simple/l_foot_prt.stl</uri>
+            <uri>model://athletebot/meshes/l_foot_prt.stl</uri>
           </mesh>
         </geometry>
       </collision>
@@ -272,7 +272,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://athletebot/athlete_robot_cy_simple/ftsensor45a_asm.stl</uri>
+            <uri>model://athletebot/meshes/ftsensor45a_asm.stl</uri>
           </mesh>
         </geometry>
       </collision>
@@ -281,7 +281,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://athletebot/athlete_robot_cy_simple/l_sole_asm.stl</uri>
+            <uri>model://athletebot/meshes/l_sole_asm.stl</uri>
           </mesh>
         </geometry>
       </collision>
@@ -290,7 +290,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://athletebot/athlete_robot_cy_simple/l_foot_prt.stl</uri>
+            <uri>model://athletebot/meshes/l_foot_prt.stl</uri>
           </mesh>
         </geometry>
       </visual>
@@ -299,7 +299,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://athletebot/athlete_robot_cy_simple/ftsensor45a_asm.stl</uri>
+            <uri>model://athletebot/meshes/ftsensor45a_asm.stl</uri>
           </mesh>
         </geometry>
       </visual>
@@ -308,7 +308,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://athletebot/athlete_robot_cy_simple/l_sole_asm.stl</uri>
+            <uri>model://athletebot/meshes/l_sole_asm.stl</uri>
           </mesh>
         </geometry>
       </visual>
@@ -387,7 +387,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://athletebot/athlete_robot_cy_simple/l_shoulder_in_upper_prt.stl</uri>
+            <uri>model://athletebot/meshes/l_shoulder_in_upper_prt.stl</uri>
           </mesh>
         </geometry>
       </collision>
@@ -396,7 +396,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://athletebot/athlete_robot_cy_simple/ftsensor45a_asm.stl</uri>
+            <uri>model://athletebot/meshes/ftsensor45a_asm.stl</uri>
           </mesh>
         </geometry>
       </collision>
@@ -405,7 +405,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://athletebot/athlete_robot_cy_simple/l_shoulder_in_lower_part_prt.stl</uri>
+            <uri>model://athletebot/meshes/l_shoulder_in_lower_part_prt.stl</uri>
           </mesh>
         </geometry>
       </collision>
@@ -414,7 +414,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://athletebot/athlete_robot_cy_simple/l_shoulder_in_upper_prt.stl</uri>
+            <uri>model://athletebot/meshes/l_shoulder_in_upper_prt.stl</uri>
           </mesh>
         </geometry>
       </visual>
@@ -423,7 +423,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://athletebot/athlete_robot_cy_simple/ftsensor45a_asm.stl</uri>
+            <uri>model://athletebot/meshes/ftsensor45a_asm.stl</uri>
           </mesh>
         </geometry>
       </visual>
@@ -432,7 +432,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://athletebot/athlete_robot_cy_simple/l_shoulder_in_lower_part_prt.stl</uri>
+            <uri>model://athletebot/meshes/l_shoulder_in_lower_part_prt.stl</uri>
           </mesh>
         </geometry>
       </visual>
@@ -476,7 +476,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://athletebot/athlete_robot_cy_simple/l_humerous_asm.stl</uri>
+            <uri>model://athletebot/meshes/l_humerous_asm.stl</uri>
           </mesh>
         </geometry>
       </collision>
@@ -485,7 +485,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://athletebot/athlete_robot_cy_simple/l_humerous_asm.stl</uri>
+            <uri>model://athletebot/meshes/l_humerous_asm.stl</uri>
           </mesh>
         </geometry>
       </visual>
@@ -529,7 +529,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://athletebot/athlete_robot_cy_simple/l_forearm_asm.stl</uri>
+            <uri>model://athletebot/meshes/l_forearm_asm.stl</uri>
           </mesh>
         </geometry>
       </collision>
@@ -538,7 +538,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://athletebot/athlete_robot_cy_simple/l_forearm_asm.stl</uri>
+            <uri>model://athletebot/meshes/l_forearm_asm.stl</uri>
           </mesh>
         </geometry>
       </visual>
@@ -582,7 +582,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://athletebot/athlete_robot_cy_simple/r_hip_in_upper_prt.stl</uri>
+            <uri>model://athletebot/meshes/r_hip_in_upper_prt.stl</uri>
           </mesh>
         </geometry>
       </collision>
@@ -591,7 +591,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://athletebot/athlete_robot_cy_simple/ftsensor45a_asm.stl</uri>
+            <uri>model://athletebot/meshes/ftsensor45a_asm.stl</uri>
           </mesh>
         </geometry>
       </collision>
@@ -600,7 +600,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://athletebot/athlete_robot_cy_simple/r_hip_in_lower_part_prt.stl</uri>
+            <uri>model://athletebot/meshes/r_hip_in_lower_part_prt.stl</uri>
           </mesh>
         </geometry>
       </collision>
@@ -609,7 +609,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://athletebot/athlete_robot_cy_simple/r_hip_in_upper_prt.stl</uri>
+            <uri>model://athletebot/meshes/r_hip_in_upper_prt.stl</uri>
           </mesh>
         </geometry>
       </visual>
@@ -618,7 +618,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://athletebot/athlete_robot_cy_simple/ftsensor45a_asm.stl</uri>
+            <uri>model://athletebot/meshes/ftsensor45a_asm.stl</uri>
           </mesh>
         </geometry>
       </visual>
@@ -627,7 +627,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://athletebot/athlete_robot_cy_simple/r_hip_in_lower_part_prt.stl</uri>
+            <uri>model://athletebot/meshes/r_hip_in_lower_part_prt.stl</uri>
           </mesh>
         </geometry>
       </visual>
@@ -638,8 +638,8 @@
       <axis>
         <xyz>1.46246e-13 -1.46246e-13 -1</xyz>
         <limit>
-          <lower>-1e+16</lower>
-          <upper>1e+16</upper>
+          <lower>-1.57</lower>
+          <upper>1.57</upper>
         </limit>
         <dynamics>
           <damping>0.1</damping>
@@ -669,7 +669,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://athletebot/athlete_robot_cy_simple/r_thigh_asm.stl</uri>
+            <uri>model://athletebot/meshes/r_thigh_asm.stl</uri>
           </mesh>
         </geometry>
       </collision>
@@ -678,7 +678,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://athletebot/athlete_robot_cy_simple/r_thigh_asm.stl</uri>
+            <uri>model://athletebot/meshes/r_thigh_asm.stl</uri>
           </mesh>
         </geometry>
       </visual>
@@ -722,7 +722,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://athletebot/athlete_robot_cy_simple/r_shank_asm.stl</uri>
+            <uri>model://athletebot/meshes/r_shank_asm.stl</uri>
           </mesh>
         </geometry>
       </collision>
@@ -731,7 +731,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://athletebot/athlete_robot_cy_simple/r_shank_asm.stl</uri>
+            <uri>model://athletebot/meshes/r_shank_asm.stl</uri>
           </mesh>
         </geometry>
       </visual>
@@ -762,12 +762,12 @@
         <pose>-0.0472645 0.0354762 -0.115853 0 -0 0</pose>
         <mass>0.122842</mass>
         <inertia>
-          <ixx>7.60181e-05</ixx>
+          <ixx>7.60181e-04</ixx>
           <ixy>7.84995e-06</ixy>
           <ixz>-2.06566e-08</ixz>
-          <iyy>3.1126e-05</iyy>
+          <iyy>3.1126e-04</iyy>
           <iyz>3.74682e-08</iyz>
-          <izz>7.00552e-05</izz>
+          <izz>7.00552e-04</izz>
         </inertia>
       </inertial>
       <collision name='r_foot_collision'>
@@ -775,7 +775,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://athletebot/athlete_robot_cy_simple/r_foot_prt.stl</uri>
+            <uri>model://athletebot/meshes/r_foot_prt.stl</uri>
           </mesh>
         </geometry>
       </collision>
@@ -784,7 +784,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://athletebot/athlete_robot_cy_simple/ftsensor45a_asm.stl</uri>
+            <uri>model://athletebot/meshes/ftsensor45a_asm.stl</uri>
           </mesh>
         </geometry>
       </collision>
@@ -793,7 +793,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://athletebot/athlete_robot_cy_simple/r_sole_asm.stl</uri>
+            <uri>model://athletebot/meshes/r_sole_asm.stl</uri>
           </mesh>
         </geometry>
       </collision>
@@ -802,7 +802,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://athletebot/athlete_robot_cy_simple/r_foot_prt.stl</uri>
+            <uri>model://athletebot/meshes/r_foot_prt.stl</uri>
           </mesh>
         </geometry>
       </visual>
@@ -811,7 +811,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://athletebot/athlete_robot_cy_simple/ftsensor45a_asm.stl</uri>
+            <uri>model://athletebot/meshes/ftsensor45a_asm.stl</uri>
           </mesh>
         </geometry>
       </visual>
@@ -820,7 +820,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://athletebot/athlete_robot_cy_simple/r_sole_asm.stl</uri>
+            <uri>model://athletebot/meshes/r_sole_asm.stl</uri>
           </mesh>
         </geometry>
       </visual>
@@ -899,7 +899,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://athletebot/athlete_robot_cy_simple/r_shoulder_in_upper_prt.stl</uri>
+            <uri>model://athletebot/meshes/r_shoulder_in_upper_prt.stl</uri>
           </mesh>
         </geometry>
       </collision>
@@ -908,7 +908,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://athletebot/athlete_robot_cy_simple/ftsensor45a_asm.stl</uri>
+            <uri>model://athletebot/meshes/ftsensor45a_asm.stl</uri>
           </mesh>
         </geometry>
       </collision>
@@ -917,7 +917,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://athletebot/athlete_robot_cy_simple/r_shoulder_in_lower_part_prt.stl</uri>
+            <uri>model://athletebot/meshes/r_shoulder_in_lower_part_prt.stl</uri>
           </mesh>
         </geometry>
       </collision>
@@ -926,7 +926,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://athletebot/athlete_robot_cy_simple/r_shoulder_in_upper_prt.stl</uri>
+            <uri>model://athletebot/meshes/r_shoulder_in_upper_prt.stl</uri>
           </mesh>
         </geometry>
       </visual>
@@ -935,7 +935,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://athletebot/athlete_robot_cy_simple/ftsensor45a_asm.stl</uri>
+            <uri>model://athletebot/meshes/ftsensor45a_asm.stl</uri>
           </mesh>
         </geometry>
       </visual>
@@ -944,7 +944,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://athletebot/athlete_robot_cy_simple/r_shoulder_in_lower_part_prt.stl</uri>
+            <uri>model://athletebot/meshes/r_shoulder_in_lower_part_prt.stl</uri>
           </mesh>
         </geometry>
       </visual>
@@ -988,7 +988,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://athletebot/athlete_robot_cy_simple/r_humerous_asm.stl</uri>
+            <uri>model://athletebot/meshes/r_humerous_asm.stl</uri>
           </mesh>
         </geometry>
       </collision>
@@ -997,7 +997,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://athletebot/athlete_robot_cy_simple/r_humerous_asm.stl</uri>
+            <uri>model://athletebot/meshes/r_humerous_asm.stl</uri>
           </mesh>
         </geometry>
       </visual>
@@ -1041,7 +1041,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://athletebot/athlete_robot_cy_simple/r_forearm_asm.stl</uri>
+            <uri>model://athletebot/meshes/r_forearm_asm.stl</uri>
           </mesh>
         </geometry>
       </collision>
@@ -1050,7 +1050,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://athletebot/athlete_robot_cy_simple/r_forearm_asm.stl</uri>
+            <uri>model://athletebot/meshes/r_forearm_asm.stl</uri>
           </mesh>
         </geometry>
       </visual>
@@ -1061,8 +1061,8 @@
       <axis>
         <xyz>-5.55111e-17 -1.58043e-12 -1</xyz>
         <limit>
-          <lower>-1e+16</lower>
-          <upper>1e+16</upper>
+          <lower>-1.57</lower>
+          <upper>1.57</upper>
         </limit>
         <dynamics>
           <damping>0.1</damping>
@@ -1079,7 +1079,7 @@
     </plugin>
     <plugin name='controlboard_right_leg' filename='libgazebo_yarp_controlboard.so'>
       <yarpConfigurationFile>model://athletebot/conf/athletebot_right_leg.ini</yarpConfigurationFile>
-      <initialConfiguration>3.14 0 0 0</initialConfiguration>        
+      <initialConfiguration>0 0 0 0</initialConfiguration>        
     </plugin>
     <plugin name='controlboard_left_arm' filename='libgazebo_yarp_controlboard.so'>
       <yarpConfigurationFile>model://athletebot/conf/athletebot_left_arm.ini</yarpConfigurationFile>
@@ -1087,7 +1087,7 @@
     </plugin>
     <plugin name='controlboard_left_leg' filename='libgazebo_yarp_controlboard.so'>
       <yarpConfigurationFile>model://athletebot/conf/athletebot_left_leg.ini</yarpConfigurationFile>
-      <initialConfiguration>3.14 0 0 0</initialConfiguration>            
+      <initialConfiguration>0 0 0 0</initialConfiguration>            
     </plugin>
   </model>
 </sdf>
