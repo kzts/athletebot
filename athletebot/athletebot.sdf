@@ -1,19 +1,19 @@
 <?xml version='1.0'?>
 <sdf version='1.5'>
-  <model name='athletebot'>
-    <pose>0 0 0.7 1.57 -0 0</pose>
+  <model name='ATHLETE_ROBOT_CY'>
+    <pose>0 0 1 1.57 0 0</pose>
     <link name='trunk'>
       <pose>0 0 0 0 -0 0</pose>
       <inertial>
-        <pose>-0.101196 0.217465 0.0391569 0 -0 0</pose>
-        <mass>0.323922</mass>
+        <pose>-0.0961522 0.204529 0.0399363 0 -0 0</pose>
+        <mass>0.332145</mass>
         <inertia>
-          <ixx>0.00844925</ixx>
-          <ixy>-0.00131477</ixy>
-          <ixz>3.80431e-05</ixz>
-          <iyy>0.00389477</iyy>
-          <iyz>-4.04572e-05</iyz>
-          <izz>0.01073</izz>
+          <ixx>0.00851663</ixx>
+          <ixy>-0.00152785</ixy>
+          <ixz>6.63328e-05</ixz>
+          <iyy>0.00387154</iyy>
+          <iyz>0.0001264</iyz>
+          <izz>0.0107068</izz>
         </inertia>
       </inertial>
       <collision name='trunk_collision'>
@@ -48,25 +48,25 @@
       <sensor name='imu_frame' type='imu'>
         <always_on>1</always_on>
         <update_rate>100</update_rate>
-        <pose>0 0 0 0 -0 0</pose>
+        <pose>-0.048 0.32 0.05 -1.5708 0 0</pose>
       </sensor>
     </link>
     <link name='l_hip_in_up'>
-      <pose>0 0 0.115894 -3.14159 -0 -2.35619</pose>
+      <pose>0 0 -0.0185 0 -0 2.0944</pose>
       <inertial>
-        <pose>-0.0380582 -0.0379993 0.141004 0 -0 0</pose>
-        <mass>0.119967</mass>
+        <pose>-0.0266167 -0.0461861 -0.00527444 -3.14159 2.11758e-22 1.8326</pose>
+        <mass>0.119145</mass>
         <inertia>
-          <ixx>3.34839e-05</ixx>
-          <ixy>-3.54776e-06</ixy>
-          <ixz>2.52953e-06</ixz>
-          <iyy>3.35663e-05</iyy>
-          <iyz>2.49918e-06</iyz>
-          <izz>4.17871e-05</izz>
+          <ixx>2.93235e-05</ixx>
+          <ixy>-4.75799e-06</ixy>
+          <ixz>3.35847e-06</ixz>
+          <iyy>2.94109e-05</iyy>
+          <iyz>3.3201e-06</iyz>
+          <izz>4.42731e-05</izz>
         </inertia>
       </inertial>
       <collision name='l_hip_in_up_collision'>
-        <pose>0 0 0.115894 0 -0 0</pose>
+        <pose>0 0 0.0185 -3.14159 2.11758e-22 1.8326</pose>
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
@@ -75,7 +75,7 @@
         </geometry>
       </collision>
       <collision name='l_hip_in_up_collision_l_hip_in_up_1'>
-        <pose>-0.0388909 -0.0388909 0.139194 0 -0 0.261799</pose>
+        <pose>-0.0275 -0.0476314 -0.0048 -3.14159 -0 1.5708</pose>
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
@@ -83,17 +83,8 @@
           </mesh>
         </geometry>
       </collision>
-      <collision name='l_hip_in_up_collision_l_hip_in_up_2'>
-        <pose>1.08316e-14 -2.41543e-14 0.115894 0 -0 0</pose>
-        <geometry>
-          <mesh>
-            <scale>0.001 0.001 0.001</scale>
-            <uri>model://athletebot/meshes/l_hip_in_lower_part_prt.stl</uri>
-          </mesh>
-        </geometry>
-      </collision>
       <visual name='l_hip_in_up_visual'>
-        <pose>0 0 0.115894 0 -0 0</pose>
+        <pose>0 0 0.0185 -3.14159 2.11758e-22 1.8326</pose>
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
@@ -102,20 +93,11 @@
         </geometry>
       </visual>
       <visual name='l_hip_in_up_visual_l_hip_in_up_1'>
-        <pose>-0.0388909 -0.0388909 0.139194 0 -0 0.261799</pose>
+        <pose>-0.0275 -0.0476314 -0.0048 -3.14159 -0 1.5708</pose>
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
             <uri>model://athletebot/meshes/ftsensor45a_asm.stl</uri>
-          </mesh>
-        </geometry>
-      </visual>
-      <visual name='l_hip_in_up_visual_l_hip_in_up_2'>
-        <pose>1.08316e-14 -2.41543e-14 0.115894 0 -0 0</pose>
-        <geometry>
-          <mesh>
-            <scale>0.001 0.001 0.001</scale>
-            <uri>model://athletebot/meshes/l_hip_in_lower_part_prt.stl</uri>
           </mesh>
         </geometry>
       </visual>
@@ -124,10 +106,10 @@
       <child>l_hip_in_up</child>
       <parent>trunk</parent>
       <axis>
-        <xyz>1.46246e-13 -1.46246e-13 -1</xyz>
+        <xyz>0 0 -1</xyz>
         <limit>
-          <lower>-1.57</lower>
-          <upper>1.57</upper>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
         </limit>
         <dynamics>
           <damping>0.1</damping>
@@ -138,18 +120,79 @@
         <use_parent_model_frame>1</use_parent_model_frame>
       </axis>
     </joint>
-    <link name='l_thigh'>
-      <pose>0.055 1.90955e-13 -0.085 -0.0316366 -1.46245e-13 4.63961e-17</pose>
+    <link name='l_hip_in_low'>
+      <pose>4.10503e-14 2.55401e-13 -5.68642e-15 -3.14159 -5.35298e-14 -2.35619</pose>
       <inertial>
-        <pose>-0.0218292 -0.145277 -0.0133603 0 -0 0</pose>
-        <mass>0.0509976</mass>
+        <pose>-0.0387252 -0.0387252 0.0709537 0 -0 0</pose>
+        <mass>0.0026393</mass>
         <inertia>
-          <ixx>0.000455256</ixx>
-          <ixy>-2.0488e-05</ixy>
-          <ixz>1.92391e-05</ixz>
-          <iyy>8.07892e-05</iyy>
-          <iyz>-2.24495e-06</iyz>
-          <izz>0.000442805</izz>
+          <ixx>1.5938e-06</ixx>
+          <ixy>1.4244e-07</ixy>
+          <ixz>9.25979e-09</ixz>
+          <iyy>1.5938e-06</iyy>
+          <iyz>9.26001e-09</iyz>
+          <izz>5.98715e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='l_hip_in_low_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://athletebot/meshes/l_hip_in_lower_part_prt.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='l_hip_in_low_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://athletebot/meshes/l_hip_in_lower_part_prt.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='l_hip_fixed' type='revolute'>
+      <child>l_hip_in_low</child>
+      <parent>l_hip_in_up</parent>
+      <axis>
+        <xyz>-0.707107 -0.707107 5.35298e-14</xyz>
+        <limit>
+          <lower>0</lower>
+          <upper>0</upper>
+          <effort>50000</effort>
+          <velocity>0.0001</velocity>
+        </limit>
+        <dynamics>
+          <damping>0.1</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+      <sensor name='left_leg_ft' type='force_torque'>
+        <always_on>1</always_on>
+        <update_rate>100</update_rate>
+        <pose>0 0 0 0 0 0</pose>
+	<plugin name='ftsensor_left_leg' filename='libgazebo_yarp_forcetorque.so'>
+	  <yarpConfigurationFile>model://athletebot/conf/FT/athletebot_left_leg_ft.ini</yarpConfigurationFile>
+	</plugin>
+      </sensor>
+    </joint>
+    <link name='l_thigh'>
+      <pose>0.055 1.23009e-13 -0.085 -0.0316366 -1.03413e-13 -6.58627e-12</pose>
+      <inertial>
+        <pose>-0.0200777 -0.150386 -0.0144973 0 -0 0</pose>
+        <mass>0.0509332</mass>
+        <inertia>
+          <ixx>0.000488988</ixx>
+          <ixy>-2.98609e-05</ixy>
+          <ixz>1.88652e-05</ixz>
+          <iyy>7.96235e-05</iyy>
+          <iyz>-3.52041e-06</iyz>
+          <izz>0.000473744</izz>
         </inertia>
       </inertial>
       <collision name='l_thigh_collision'>
@@ -173,9 +216,9 @@
     </link>
     <joint name='l_hip_roll' type='revolute'>
       <child>l_thigh</child>
-      <parent>l_hip_in_up</parent>
+      <parent>l_hip_in_low</parent>
       <axis>
-        <xyz>1 4.63961e-17 1.46245e-13</xyz>
+        <xyz>1 -6.58627e-12 1.03413e-13</xyz>
         <limit>
           <lower>-1.5708</lower>
           <upper>1.5708</upper>
@@ -192,17 +235,17 @@
       </axis>
     </joint>
     <link name='l_shank'>
-      <pose>2.35922e-14 -0.300251 -0.0754979 -0.0316264 0.000803033 0.0253773</pose>
+      <pose>-1.94253e-12 -0.300251 -0.0754979 -0.0316264 0.000803033 0.0253773</pose>
       <inertial>
-        <pose>0.0162517 -0.149735 4.58883e-05 0 -0 0</pose>
-        <mass>0.0345995</mass>
+        <pose>0.0168768 -0.152352 -0.000303936 0 -0 0</pose>
+        <mass>0.0348498</mass>
         <inertia>
-          <ixx>0.000312551</ixx>
-          <ixy>6.15034e-06</ixy>
-          <ixz>1.57279e-08</ixz>
-          <iyy>3.02698e-05</iyy>
-          <iyz>2.99291e-08</iyz>
-          <izz>0.000301933</izz>
+          <ixx>0.000347096</ixx>
+          <ixy>3.5249e-06</ixy>
+          <ixz>-1.88168e-07</ixz>
+          <iyy>2.93664e-05</iyy>
+          <iyz>-1.36816e-06</iyz>
+          <izz>0.000335591</izz>
         </inertia>
       </inertial>
       <collision name='l_shank_collision'>
@@ -228,7 +271,7 @@
       <child>l_shank</child>
       <parent>l_thigh</parent>
       <axis>
-        <xyz>3.7599e-10 -0.0316313 -0.9995</xyz>
+        <xyz>3.75738e-10 -0.0316313 -0.9995</xyz>
         <limit>
           <lower>-2.61799</lower>
           <upper>2.61799</upper>
@@ -245,70 +288,34 @@
       </axis>
     </joint>
     <link name='l_foot'>
-      <pose>0.00761621 -0.596339 0.0498248 -3.14079 0.0316264 1.5962</pose>
+      <pose>0.00761619 -0.596639 0.0403295 -3.14079 0.0316264 1.5962</pose>
       <inertial>
-        <pose>-0.0472636 0.0354762 0.115935 0 -0 0</pose>
-        <mass>0.122842</mass>
+        <pose>-0.00794449 0.00691015 0.106394 0 -0 0</pose>
+        <mass>0.00435303</mass>
         <inertia>
-          <ixx>7.60181e-04</ixx>
-          <ixy>7.85001e-06</ixy>
-          <ixz>-2.08089e-08</ixz>
-          <iyy>3.11261e-04</iyy>
-          <iyz>3.75761e-08</iyz>
-          <izz>7.00553e-04</izz>
+          <ixx>2.52928e-06</ixx>
+          <ixy>5.4451e-07</ixy>
+          <ixz>0</ixz>
+          <iyy>1.95993e-06</iyy>
+          <iyz>0</iyz>
+          <izz>3.24897e-06</izz>
         </inertia>
       </inertial>
       <collision name='l_foot_collision'>
-        <pose>8.89112e-07 0 0.115894 0 -0 0</pose>
+        <pose>3.9051e-07 0 0.106394 0 -0 0</pose>
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
             <uri>model://athletebot/meshes/l_foot_prt.stl</uri>
-          </mesh>
-        </geometry>
-      </collision>
-      <collision name='l_foot_collision_l_foot_1'>
-        <pose>-0.0489995 0.035 0.115894 1.5708 0.523599 1.5708</pose>
-        <geometry>
-          <mesh>
-            <scale>0.001 0.001 0.001</scale>
-            <uri>model://athletebot/meshes/ftsensor45a_asm.stl</uri>
-          </mesh>
-        </geometry>
-      </collision>
-      <collision name='l_foot_collision_l_foot_2'>
-        <pose>-0.0207992 1.81677e-08 0.115894 -3.14159 -1.80002e-09 1.5708</pose>
-        <geometry>
-          <mesh>
-            <scale>0.001 0.001 0.001</scale>
-            <uri>model://athletebot/meshes/l_sole_asm.stl</uri>
           </mesh>
         </geometry>
       </collision>
       <visual name='l_foot_visual'>
-        <pose>8.89112e-07 0 0.115894 0 -0 0</pose>
+        <pose>3.9051e-07 0 0.106394 0 -0 0</pose>
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
             <uri>model://athletebot/meshes/l_foot_prt.stl</uri>
-          </mesh>
-        </geometry>
-      </visual>
-      <visual name='l_foot_visual_l_foot_1'>
-        <pose>-0.0489995 0.035 0.115894 1.5708 0.523599 1.5708</pose>
-        <geometry>
-          <mesh>
-            <scale>0.001 0.001 0.001</scale>
-            <uri>model://athletebot/meshes/ftsensor45a_asm.stl</uri>
-          </mesh>
-        </geometry>
-      </visual>
-      <visual name='l_foot_visual_l_foot_2'>
-        <pose>-0.0207992 1.81677e-08 0.115894 -3.14159 -1.80002e-09 1.5708</pose>
-        <geometry>
-          <mesh>
-            <scale>0.001 0.001 0.001</scale>
-            <uri>model://athletebot/meshes/l_sole_asm.stl</uri>
           </mesh>
         </geometry>
       </visual>
@@ -317,7 +324,7 @@
       <child>l_foot</child>
       <parent>l_shank</parent>
       <axis>
-        <xyz>3.65757e-10 -0.0316313 -0.9995</xyz>
+        <xyz>3.65506e-10 -0.0316313 -0.9995</xyz>
         <limit>
           <lower>-1.5708</lower>
           <upper>1.5708</upper>
@@ -333,20 +340,117 @@
         <use_parent_model_frame>1</use_parent_model_frame>
       </axis>
     </joint>
-    <link name='l_shoulder_lateral'>
-      <pose>0 0.5 0.006 0 -0 0</pose>
+    <link name='l_foot_ftsens'>
+      <pose>0.0438489 -0.648076 -0.0644902 -1.60729 -0.522507 0.0436231</pose>
       <inertial>
-        <pose>0.041059 0.062206 -0.0672789 0 -0 0</pose>
-        <mass>0.0218958</mass>
+        <pose>0.00134713 0.000826301 0.000493952 0 -0 0</pose>
+        <mass>0.120097</mass>
         <inertia>
-          <ixx>9.28285e-05</ixx>
-          <ixy>-6.1149e-06</ixy>
-          <ixz>1.00449e-06</ixz>
-          <iyy>8.15747e-05</iyy>
-          <iyz>1.26841e-05</iyz>
-          <izz>3.87872e-05</izz>
+          <ixx>3.49386e-05</ixx>
+          <ixy>-1.7733e-05</ixy>
+          <ixz>3.84468e-06</ixz>
+          <iyy>5.55144e-05</iyy>
+          <iyz>2.18853e-06</iyz>
+          <izz>7.77467e-05</izz>
         </inertia>
       </inertial>
+      <collision name='l_foot_ftsens_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://athletebot/meshes/ftsensor45a_asm.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='l_foot_ftsens_collision_l_foot_ftsens_1'>
+        <pose>-0.0303108 -0.0175 0.0282003 1.5708 -2.8489e-07 0.523599</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://athletebot/meshes/l_sole_asm.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='l_foot_ftsens_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://athletebot/meshes/ftsensor45a_asm.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='l_foot_ftsens_visual_l_foot_ftsens_1'>
+        <pose>-0.0303108 -0.0175 0.0282003 1.5708 -2.8489e-07 0.523599</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://athletebot/meshes/l_sole_asm.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='l_foot_fixed' type='revolute'>
+      <child>l_foot_ftsens</child>
+      <parent>l_foot</parent>
+      <axis>
+        <xyz>0.865746 0.0377905 0.499054</xyz>
+        <limit>
+          <lower>0</lower>
+          <upper>0</upper>
+          <effort>50000</effort>
+          <velocity>0.0001</velocity>
+        </limit>
+        <dynamics>
+          <damping>0.1</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+      <sensor name='left_foot_ft' type='force_torque'>
+        <always_on>1</always_on>
+        <update_rate>100</update_rate>
+        <pose>0 0 0 0 0 0</pose>
+	<plugin name='ftsensor_left_foot' filename='libgazebo_yarp_forcetorque.so'>
+	  <yarpConfigurationFile>model://athletebot/conf/FT/athletebot_left_foot_ft.ini</yarpConfigurationFile>
+	</plugin>
+      </sensor>
+    </joint>
+    <link name='l_shoulder_lateral'>
+      <pose>0 0.5 -0.0931175 0 -0 0</pose>
+      <inertial>
+        <pose>0.0400974 0.058849 0.0294444 0 -0 0</pose>
+        <mass>0.0241779</mass>
+        <inertia>
+          <ixx>0.00011666</ixx>
+          <ixy>-8.61211e-06</ixy>
+          <ixz>5.63375e-06</ixz>
+          <iyy>0.000102116</iyy>
+          <iyz>2.04937e-05</iyz>
+          <izz>4.70351e-05</izz>
+        </inertia>
+      </inertial>
+      <collision name='l_shoulder_lateral_collision'>
+        <pose>0 0 0.0991175 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://athletebot/meshes/l_shoulder_lateral_asm.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='l_shoulder_lateral_visual'>
+        <pose>0 0 0.0991175 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://athletebot/meshes/l_shoulder_lateral_asm.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
     </link>
     <joint name='l_shoulder_pitch' type='revolute'>
       <child>l_shoulder_lateral</child>
@@ -369,21 +473,21 @@
       </axis>
     </joint>
     <link name='l_shoulder_in_up'>
-      <pose>0 0.434473 -0.11 1.5708 0.785398 -7.85046e-17</pose>
+      <pose>0 0.430973 -0.11 1.5708 0.785398 -7.85046e-17</pose>
       <inertial>
-        <pose>-0.0379632 -0.0379035 -0.121205 0 -0 0</pose>
-        <mass>0.120115</mass>
+        <pose>-0.0378851 -0.0378244 -0.125728 0 -0 0</pose>
+        <mass>0.118046</mass>
         <inertia>
-          <ixx>3.22547e-05</ixx>
-          <ixy>-3.84791e-06</ixy>
-          <ixz>1.77678e-06</ixz>
-          <iyy>3.23387e-05</iyy>
-          <iyz>1.74945e-06</iyz>
-          <izz>4.18874e-05</izz>
+          <ixx>2.64173e-05</ixx>
+          <ixy>-4.23745e-06</ixy>
+          <ixz>1.80163e-06</ixz>
+          <iyy>2.65024e-05</iyy>
+          <iyz>1.76698e-06</iyz>
+          <izz>4.19971e-05</izz>
         </inertia>
       </inertial>
       <collision name='l_shoulder_in_up_collision'>
-        <pose>0 0 -0.137527 0 -0 0</pose>
+        <pose>0 0 -0.141027 0 -0 0</pose>
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
@@ -392,7 +496,7 @@
         </geometry>
       </collision>
       <collision name='l_shoulder_in_up_collision_l_shoulder_in_up_1'>
-        <pose>-0.0388909 -0.0388909 -0.123227 0 -0 0.261799</pose>
+        <pose>-0.0388909 -0.0388909 -0.126727 0 -0 0.261799</pose>
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
@@ -400,17 +504,8 @@
           </mesh>
         </geometry>
       </collision>
-      <collision name='l_shoulder_in_up_collision_l_shoulder_in_up_2'>
-        <pose>1.08316e-14 -2.41543e-14 -0.137527 0 -0 0</pose>
-        <geometry>
-          <mesh>
-            <scale>0.001 0.001 0.001</scale>
-            <uri>model://athletebot/meshes/l_shoulder_in_lower_part_prt.stl</uri>
-          </mesh>
-        </geometry>
-      </collision>
       <visual name='l_shoulder_in_up_visual'>
-        <pose>0 0 -0.137527 0 -0 0</pose>
+        <pose>0 0 -0.141027 0 -0 0</pose>
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
@@ -419,20 +514,11 @@
         </geometry>
       </visual>
       <visual name='l_shoulder_in_up_visual_l_shoulder_in_up_1'>
-        <pose>-0.0388909 -0.0388909 -0.123227 0 -0 0.261799</pose>
+        <pose>-0.0388909 -0.0388909 -0.126727 0 -0 0.261799</pose>
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
             <uri>model://athletebot/meshes/ftsensor45a_asm.stl</uri>
-          </mesh>
-        </geometry>
-      </visual>
-      <visual name='l_shoulder_in_up_visual_l_shoulder_in_up_2'>
-        <pose>1.08316e-14 -2.41543e-14 -0.137527 0 -0 0</pose>
-        <geometry>
-          <mesh>
-            <scale>0.001 0.001 0.001</scale>
-            <uri>model://athletebot/meshes/l_shoulder_in_lower_part_prt.stl</uri>
           </mesh>
         </geometry>
       </visual>
@@ -457,18 +543,79 @@
         <use_parent_model_frame>1</use_parent_model_frame>
       </axis>
     </joint>
+    <link name='l_shoulder_in_low'>
+      <pose>-4.97723e-13 0.572 -0.11 1.5708 0.785398 -7.85046e-17</pose>
+      <inertial>
+        <pose>-0.0388216 -0.0388217 0.061047 0 -0 0</pose>
+        <mass>0.00263007</mass>
+        <inertia>
+          <ixx>1.52173e-06</ixx>
+          <ixy>1.44976e-07</ixy>
+          <ixz>4.293e-09</ixz>
+          <iyy>1.52173e-06</iyy>
+          <iyz>4.29116e-09</iyz>
+          <izz>5.9826e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='l_shoulder_in_low_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://athletebot/meshes/l_shoulder_in_lower_part_prt.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='l_shoulder_in_low_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://athletebot/meshes/l_shoulder_in_lower_part_prt.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='l_shoulder_fixed' type='revolute'>
+      <child>l_shoulder_in_low</child>
+      <parent>l_shoulder_in_up</parent>
+      <axis>
+        <xyz>0.707107 0 -0.707107</xyz>
+        <limit>
+          <lower>0</lower>
+          <upper>0</upper>
+          <effort>50000</effort>
+          <velocity>0.0001</velocity>
+        </limit>
+        <dynamics>
+          <damping>0.1</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+      <sensor name='left_arm_ft' type='force_torque'>
+        <always_on>1</always_on>
+        <update_rate>100</update_rate>
+        <pose>0 0 0 0 0 0</pose>
+	<plugin name='ftsensor_left_arm' filename='libgazebo_yarp_forcetorque.so'>
+	  <yarpConfigurationFile>model://athletebot/conf/FT/athletebot_left_arm_ft.ini</yarpConfigurationFile>
+	</plugin>
+      </sensor>
+    </joint>
     <link name='l_humerous'>
       <pose>-0.055 0.498 -0.11 1.43421e-12 -2.48295e-24 3.46245e-12</pose>
       <inertial>
-        <pose>0.0131526 -0.155324 0.0173149 0 -0 0</pose>
-        <mass>0.03366</mass>
+        <pose>0.0125929 -0.14822 0.0175614 0 -0 0</pose>
+        <mass>0.0324319</mass>
         <inertia>
-          <ixx>0.000303096</ixx>
-          <ixy>1.66025e-05</ixy>
-          <ixz>6.79119e-06</ixz>
-          <iyy>3.37424e-05</iyy>
-          <iyz>-1.57072e-06</iyz>
-          <izz>0.000315904</izz>
+          <ixx>0.000293621</ixx>
+          <ixy>2.02973e-05</ixy>
+          <ixz>6.52102e-06</ixz>
+          <iyy>3.23056e-05</iyy>
+          <iyz>-1.7379e-06</iyz>
+          <izz>0.000304934</izz>
         </inertia>
       </inertial>
       <collision name='l_humerous_collision'>
@@ -492,7 +639,7 @@
     </link>
     <joint name='l_shoulder_roll' type='revolute'>
       <child>l_humerous</child>
-      <parent>l_shoulder_in_up</parent>
+      <parent>l_shoulder_in_low</parent>
       <axis>
         <xyz>-1 -3.46245e-12 -2.48295e-24</xyz>
         <limit>
@@ -511,17 +658,17 @@
       </axis>
     </joint>
     <link name='l_forearm'>
-      <pose>8.23189e-13 0.198 -0.11 1.43421e-12 -2.48295e-24 3.46245e-12</pose>
+      <pose>8.1108e-13 0.198 -0.11 1.43421e-12 -2.48295e-24 3.46245e-12</pose>
       <inertial>
-        <pose>-0.0145878 -0.157939 0.001401 0 -0 0</pose>
-        <mass>0.00562639</mass>
+        <pose>-0.0135034 -0.145081 0.002006 0 -0 0</pose>
+        <mass>0.00613751</mass>
         <inertia>
-          <ixx>9.9794e-05</ixx>
-          <ixy>-2.14183e-06</ixy>
-          <ixz>-5.77187e-08</ixz>
-          <iyy>1.97858e-06</iyy>
-          <iyz>-1.17545e-06</iyz>
-          <izz>9.89068e-05</izz>
+          <ixx>0.000111157</ixx>
+          <ixy>-3.11283e-06</ixy>
+          <ixz>-1.11372e-07</ixz>
+          <iyy>2.18322e-06</iyy>
+          <iyz>-1.71897e-06</iyz>
+          <izz>0.000110384</izz>
         </inertia>
       </inertial>
       <collision name='l_forearm_collision'>
@@ -564,70 +711,34 @@
       </axis>
     </joint>
     <link name='r_hip_in_up'>
-      <pose>0 0 -0.0358943 -3.14159 -0 -2.35619</pose>
+      <pose>0 0 0.0985 -3.14159 -0 0</pose>
       <inertial>
-        <pose>-0.0380811 -0.0380847 -0.141004 0 -0 0</pose>
-        <mass>0.119967</mass>
+        <pose>0.0241627 0 0.0183179 0 -0 2.35619</pose>
+        <mass>0.00643815</mass>
         <inertia>
-          <ixx>3.35405e-05</ixx>
-          <ixy>-3.49057e-06</ixy>
-          <ixz>-2.54102e-06</ixz>
-          <iyy>3.35316e-05</iyy>
-          <iyz>-2.54206e-06</iyz>
-          <izz>4.1809e-05</izz>
+          <ixx>4.05418e-06</ixx>
+          <ixy>-1.84253e-06</ixy>
+          <ixz>-4.0103e-08</ixz>
+          <iyy>4.05418e-06</iyy>
+          <iyz>-4.01016e-08</iyz>
+          <izz>6.47614e-06</izz>
         </inertia>
       </inertial>
       <collision name='r_hip_in_up_collision'>
-        <pose>0 0 -0.115894 0 -0 0</pose>
+        <pose>0 0 0.0185 0 -0 2.35619</pose>
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
             <uri>model://athletebot/meshes/r_hip_in_upper_prt.stl</uri>
-          </mesh>
-        </geometry>
-      </collision>
-      <collision name='r_hip_in_up_collision_r_hip_in_up_1'>
-        <pose>-0.0388909 -0.0388909 -0.139194 -3.14159 -0 -0.785398</pose>
-        <geometry>
-          <mesh>
-            <scale>0.001 0.001 0.001</scale>
-            <uri>model://athletebot/meshes/ftsensor45a_asm.stl</uri>
-          </mesh>
-        </geometry>
-      </collision>
-      <collision name='r_hip_in_up_collision_r_hip_in_up_2'>
-        <pose>2.35229e-14 -1.07483e-14 -0.115894 3.53069e-13 -1.46246e-13 -1.82557e-26</pose>
-        <geometry>
-          <mesh>
-            <scale>0.001 0.001 0.001</scale>
-            <uri>model://athletebot/meshes/r_hip_in_lower_part_prt.stl</uri>
           </mesh>
         </geometry>
       </collision>
       <visual name='r_hip_in_up_visual'>
-        <pose>0 0 -0.115894 0 -0 0</pose>
+        <pose>0 0 0.0185 0 -0 2.35619</pose>
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
             <uri>model://athletebot/meshes/r_hip_in_upper_prt.stl</uri>
-          </mesh>
-        </geometry>
-      </visual>
-      <visual name='r_hip_in_up_visual_r_hip_in_up_1'>
-        <pose>-0.0388909 -0.0388909 -0.139194 -3.14159 -0 -0.785398</pose>
-        <geometry>
-          <mesh>
-            <scale>0.001 0.001 0.001</scale>
-            <uri>model://athletebot/meshes/ftsensor45a_asm.stl</uri>
-          </mesh>
-        </geometry>
-      </visual>
-      <visual name='r_hip_in_up_visual_r_hip_in_up_2'>
-        <pose>2.35229e-14 -1.07483e-14 -0.115894 3.53069e-13 -1.46246e-13 -1.82557e-26</pose>
-        <geometry>
-          <mesh>
-            <scale>0.001 0.001 0.001</scale>
-            <uri>model://athletebot/meshes/r_hip_in_lower_part_prt.stl</uri>
           </mesh>
         </geometry>
       </visual>
@@ -636,10 +747,10 @@
       <child>r_hip_in_up</child>
       <parent>trunk</parent>
       <axis>
-        <xyz>1.46246e-13 -1.46246e-13 -1</xyz>
+        <xyz>0 2.06823e-13 -1</xyz>
         <limit>
-          <lower>-1.57</lower>
-          <upper>1.57</upper>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
         </limit>
         <dynamics>
           <damping>0.1</damping>
@@ -650,18 +761,148 @@
         <use_parent_model_frame>1</use_parent_model_frame>
       </axis>
     </joint>
-    <link name='r_thigh'>
-      <pose>0.055 2.62644e-13 0.165 0.00594316 -4.99314e-13 -2.67257e-16</pose>
+    <link name='r_hip_ftsens'>
+      <pose>0.055 -9.92751e-16 0.1033 2.06823e-13 2.06823e-13 -1.5708</pose>
       <inertial>
-        <pose>-0.0218292 -0.145277 0.0133606 0 -0 0</pose>
-        <mass>0.0509976</mass>
+        <pose>2.3187e-06 5.3e-05 0.001822 0 -0 0</pose>
+        <mass>0.112707</mass>
         <inertia>
-          <ixx>0.000455257</ixx>
-          <ixy>-2.04882e-05</ixy>
-          <ixz>-1.92393e-05</ixz>
-          <iyy>8.07897e-05</iyy>
-          <iyz>2.24473e-06</iyz>
-          <izz>0.000442805</izz>
+          <ixx>1.85914e-05</ixx>
+          <ixy>-4.08392e-09</ixy>
+          <ixz>-1.81089e-09</ixz>
+          <iyy>1.86776e-05</iyy>
+          <iyz>-2.45183e-08</iyz>
+          <izz>3.20162e-05</izz>
+        </inertia>
+      </inertial>
+      <collision name='r_hip_ftsens_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://athletebot/meshes/ftsensor45a_asm.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='r_hip_ftsens_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://athletebot/meshes/ftsensor45a_asm.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='r_hip_ft' type='revolute'>
+      <child>r_hip_ftsens</child>
+      <parent>r_hip_in_up</parent>
+      <axis>
+        <xyz>4.89658e-12 -1 -2.06823e-13</xyz>
+        <limit>
+          <lower>0</lower>
+          <upper>0</upper>
+          <effort>50000</effort>
+          <velocity>0.0001</velocity>
+        </limit>
+        <dynamics>
+          <damping>0.1</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+      <physics>
+        <ode>
+          <limit>
+            <cfm>0</cfm>
+            <erp>0.2</erp>
+          </limit>
+        </ode>
+      </physics>
+      <sensor name='r_hip_ft' type='force_torque'>
+        <always_on>1</always_on>
+        <update_rate>100</update_rate>
+        <force_torque>
+          <frame>child</frame>
+          <measure_direction>child_to_parent</measure_direction>
+        </force_torque>
+      </sensor>
+    </joint>
+    <link name='r_hip_in_low'>
+      <pose>4.82253e-15 -2.6549e-13 0.08 -3.14159 2.92492e-13 -2.35619</pose>
+      <inertial>
+        <pose>-0.0387252 -0.0387252 -0.070954 0 -0 0</pose>
+        <mass>0.0026393</mass>
+        <inertia>
+          <ixx>1.5938e-06</ixx>
+          <ixy>1.4244e-07</ixy>
+          <ixz>-9.25978e-09</ixz>
+          <iyy>1.5938e-06</iyy>
+          <iyz>-9.26002e-09</iyz>
+          <izz>5.98715e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='r_hip_in_low_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://athletebot/meshes/r_hip_in_lower_part_prt.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='r_hip_in_low_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://athletebot/meshes/r_hip_in_lower_part_prt.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='r_hip_fixed' type='revolute'>
+      <child>r_hip_in_low</child>
+      <parent>r_hip_ftsens</parent>
+      <axis>
+        <xyz>-0.707107 -0.707107 -2.92492e-13</xyz>
+        <limit>
+          <lower>0</lower>
+          <upper>0</upper>
+          <effort>50000</effort>
+          <velocity>0.0001</velocity>
+        </limit>
+        <dynamics>
+          <damping>0.1</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+      <sensor name='right_leg_ft' type='force_torque'>
+        <always_on>1</always_on>
+        <update_rate>100</update_rate>
+        <pose>0 0 0 0 0 0</pose>
+        <plugin name='ftsensor_right_leg' filename='libgazebo_yarp_forcetorque.so'>
+	  <yarpConfigurationFile>model://athletebot/conf/FT/athletebot_right_leg_ft.ini</yarpConfigurationFile>
+	</plugin>
+      </sensor>
+    </joint>
+    <link name='r_thigh'>
+      <pose>0.055 -2.55608e-14 0.165 0.00594316 -3.53069e-13 1.51057e-16</pose>
+      <inertial>
+        <pose>-0.0200751 -0.150387 0.01457 0 -0 0</pose>
+        <mass>0.0527068</mass>
+        <inertia>
+          <ixx>0.000490655</ixx>
+          <ixy>-2.98609e-05</ixy>
+          <ixz>-1.9634e-05</ixz>
+          <iyy>8.18949e-05</iyy>
+          <iyz>3.52047e-06</iyz>
+          <izz>0.00047454</izz>
         </inertia>
       </inertial>
       <collision name='r_thigh_collision'>
@@ -685,9 +926,9 @@
     </link>
     <joint name='r_hip_roll' type='revolute'>
       <child>r_thigh</child>
-      <parent>r_hip_in_up</parent>
+      <parent>r_hip_in_low</parent>
       <axis>
-        <xyz>-1 2.67257e-16 -4.99314e-13</xyz>
+        <xyz>-1 -1.51057e-16 -3.53069e-13</xyz>
         <limit>
           <lower>-1.5708</lower>
           <upper>1.5708</upper>
@@ -704,21 +945,21 @@
       </axis>
     </joint>
     <link name='r_shank'>
-      <pose>-2.30926e-14 -0.299702 0.0463224 0.00594238 -9.61888e-05 0.0161853</pose>
+      <pose>-8.04912e-16 -0.299764 0.0568222 0.00594238 -9.61888e-05 0.0161853</pose>
       <inertial>
-        <pose>0.0162516 -0.149735 0.116849 0 -0 0</pose>
-        <mass>0.0345995</mass>
+        <pose>0.0168768 -0.152352 0.106698 0 -0 0</pose>
+        <mass>0.0348498</mass>
         <inertia>
-          <ixx>0.000312551</ixx>
-          <ixy>6.15034e-06</ixy>
-          <ixz>-1.57279e-08</ixz>
-          <iyy>3.02698e-05</iyy>
-          <iyz>-2.99285e-08</iyz>
-          <izz>0.000301933</izz>
+          <ixx>0.000347096</ixx>
+          <ixy>3.5249e-06</ixy>
+          <ixz>1.88168e-07</ixz>
+          <iyy>2.93664e-05</iyy>
+          <iyz>1.36816e-06</iyz>
+          <izz>0.000335591</izz>
         </inertia>
       </inertial>
       <collision name='r_shank_collision'>
-        <pose>0 -0.3 0.116894 0 -0 0</pose>
+        <pose>0 -0.3 0.106394 0 -0 0</pose>
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
@@ -727,7 +968,7 @@
         </geometry>
       </collision>
       <visual name='r_shank_visual'>
-        <pose>0 -0.3 0.116894 0 -0 0</pose>
+        <pose>0 -0.3 0.106394 0 -0 0</pose>
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
@@ -740,7 +981,7 @@
       <child>r_shank</child>
       <parent>r_thigh</parent>
       <axis>
-        <xyz>-6.67854e-11 0.00594312 -0.999982</xyz>
+        <xyz>-6.69317e-11 0.00594312 -0.999982</xyz>
         <limit>
           <lower>-2.61799</lower>
           <upper>2.61799</upper>
@@ -757,70 +998,34 @@
       </axis>
     </joint>
     <link name='r_foot'>
-      <pose>0.00485546 -0.599663 0.0455397 3.1415 -0.00594242 1.58659</pose>
+      <pose>0.00485546 -0.599719 0.0550395 3.1415 -0.00594242 1.58659</pose>
       <inertial>
-        <pose>-0.0472645 0.0354762 -0.115853 0 -0 0</pose>
-        <mass>0.122842</mass>
+        <pose>-0.00794493 0.00691014 -0.106394 0 -0 0</pose>
+        <mass>0.00435303</mass>
         <inertia>
-          <ixx>7.60181e-04</ixx>
-          <ixy>7.84995e-06</ixy>
-          <ixz>-2.06566e-08</ixz>
-          <iyy>3.1126e-04</iyy>
-          <iyz>3.74682e-08</iyz>
-          <izz>7.00552e-04</izz>
+          <ixx>2.52928e-06</ixx>
+          <ixy>5.4451e-07</ixy>
+          <ixz>0</ixz>
+          <iyy>1.95993e-06</iyy>
+          <iyz>0</iyz>
+          <izz>3.24897e-06</izz>
         </inertia>
       </inertial>
       <collision name='r_foot_collision'>
-        <pose>-2.25845e-07 0 -0.115894 0 -0 0</pose>
+        <pose>-6.85237e-07 0 -0.106394 0 -0 0</pose>
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
             <uri>model://athletebot/meshes/r_foot_prt.stl</uri>
-          </mesh>
-        </geometry>
-      </collision>
-      <collision name='r_foot_collision_r_foot_1'>
-        <pose>-0.0489998 0.035 -0.115894 1.5708 0.523599 1.5708</pose>
-        <geometry>
-          <mesh>
-            <scale>0.001 0.001 0.001</scale>
-            <uri>model://athletebot/meshes/ftsensor45a_asm.stl</uri>
-          </mesh>
-        </geometry>
-      </collision>
-      <collision name='r_foot_collision_r_foot_2'>
-        <pose>-0.0208002 5.05203e-10 -0.115894 3.14159 -3.70641e-11 1.5708</pose>
-        <geometry>
-          <mesh>
-            <scale>0.001 0.001 0.001</scale>
-            <uri>model://athletebot/meshes/r_sole_asm.stl</uri>
           </mesh>
         </geometry>
       </collision>
       <visual name='r_foot_visual'>
-        <pose>-2.25845e-07 0 -0.115894 0 -0 0</pose>
+        <pose>-6.85237e-07 0 -0.106394 0 -0 0</pose>
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
             <uri>model://athletebot/meshes/r_foot_prt.stl</uri>
-          </mesh>
-        </geometry>
-      </visual>
-      <visual name='r_foot_visual_r_foot_1'>
-        <pose>-0.0489998 0.035 -0.115894 1.5708 0.523599 1.5708</pose>
-        <geometry>
-          <mesh>
-            <scale>0.001 0.001 0.001</scale>
-            <uri>model://athletebot/meshes/ftsensor45a_asm.stl</uri>
-          </mesh>
-        </geometry>
-      </visual>
-      <visual name='r_foot_visual_r_foot_2'>
-        <pose>-0.0208002 5.05203e-10 -0.115894 3.14159 -3.70641e-11 1.5708</pose>
-        <geometry>
-          <mesh>
-            <scale>0.001 0.001 0.001</scale>
-            <uri>model://athletebot/meshes/r_sole_asm.stl</uri>
           </mesh>
         </geometry>
       </visual>
@@ -829,7 +1034,7 @@
       <child>r_foot</child>
       <parent>r_shank</parent>
       <axis>
-        <xyz>-5.91151e-11 0.00594312 -0.999982</xyz>
+        <xyz>-5.92613e-11 0.00594312 -0.999982</xyz>
         <limit>
           <lower>-1.5708</lower>
           <upper>1.5708</upper>
@@ -845,20 +1050,117 @@
         <use_parent_model_frame>1</use_parent_model_frame>
       </axis>
     </joint>
-    <link name='r_shoulder_lateral'>
-      <pose>0 0.5 0.074 0 -0 0</pose>
+    <link name='r_foot_ftsens'>
+      <pose>0.0406248 -0.648792 0.161144 -1.56393 -0.523682 0.0123594</pose>
       <inertial>
-        <pose>0.041059 0.062206 0.067279 0 -0 0</pose>
-        <mass>0.0218958</mass>
+        <pose>0.00134719 0.000826374 0.000493363 0 -0 0</pose>
+        <mass>0.120097</mass>
         <inertia>
-          <ixx>9.28285e-05</ixx>
-          <ixy>-6.1149e-06</ixy>
-          <ixz>-1.00449e-06</ixz>
-          <iyy>8.15747e-05</iyy>
-          <iyz>-1.26841e-05</iyz>
-          <izz>3.87872e-05</izz>
+          <ixx>3.49382e-05</ixx>
+          <ixy>-1.7733e-05</ixy>
+          <ixz>3.84452e-06</ixz>
+          <iyy>5.55141e-05</iyy>
+          <iyz>2.1884e-06</iyz>
+          <izz>7.77467e-05</izz>
         </inertia>
       </inertial>
+      <collision name='r_foot_ftsens_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://athletebot/meshes/ftsensor45a_asm.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='r_foot_ftsens_collision_r_foot_ftsens_1'>
+        <pose>-0.030311 -0.0174997 0.0281997 1.5708 -4.41245e-07 0.523599</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://athletebot/meshes/r_sole_asm.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='r_foot_ftsens_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://athletebot/meshes/ftsensor45a_asm.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='r_foot_ftsens_visual_r_foot_ftsens_1'>
+        <pose>-0.030311 -0.0174997 0.0281997 1.5708 -4.41245e-07 0.523599</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://athletebot/meshes/r_sole_asm.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='r_foot_fixed' type='revolute'>
+      <child>r_foot_ftsens</child>
+      <parent>r_foot</parent>
+      <axis>
+        <xyz>0.865917 0.0107028 0.500072</xyz>
+        <limit>
+          <lower>0</lower>
+          <upper>0</upper>
+          <effort>50000</effort>
+          <velocity>0.0001</velocity>
+        </limit>
+        <dynamics>
+          <damping>0.1</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+      <sensor name='right_foot_ft' type='force_torque'>
+        <always_on>1</always_on>
+        <update_rate>100</update_rate>
+        <pose>0 0 0 0 0 0</pose>
+	<plugin name='ftsensor_right_foot' filename='libgazebo_yarp_forcetorque.so'>
+	  <yarpConfigurationFile>model://athletebot/conf/FT/athletebot_right_foot_ft.ini</yarpConfigurationFile>
+        </plugin>
+      </sensor>
+    </joint>
+    <link name='r_shoulder_lateral'>
+      <pose>0 0.5 0.173118 0 -0 0</pose>
+      <inertial>
+        <pose>0.0400974 0.058849 -0.029445 0 -0 0</pose>
+        <mass>0.0241779</mass>
+        <inertia>
+          <ixx>0.00011666</ixx>
+          <ixy>-8.61211e-06</ixy>
+          <ixz>-5.63375e-06</ixz>
+          <iyy>0.000102116</iyy>
+          <iyz>-2.04937e-05</iyz>
+          <izz>4.70351e-05</izz>
+        </inertia>
+      </inertial>
+      <collision name='r_shoulder_lateral_collision'>
+        <pose>0 0 -0.099118 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://athletebot/meshes/r_shoulder_lateral_asm.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='r_shoulder_lateral_visual'>
+        <pose>0 0 -0.099118 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://athletebot/meshes/r_shoulder_lateral_asm.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
     </link>
     <joint name='r_shoulder_pitch' type='revolute'>
       <child>r_shoulder_lateral</child>
@@ -881,21 +1183,21 @@
       </axis>
     </joint>
     <link name='r_shoulder_in_up'>
-      <pose>0 0.434473 0.19 -1.5708 -0.785398 -7.85046e-17</pose>
+      <pose>0 0.430973 0.19 -1.5708 -0.785398 -7.85046e-17</pose>
       <inertial>
-        <pose>-0.0379861 -0.0379888 0.121205 0 -0 0</pose>
-        <mass>0.120115</mass>
+        <pose>-0.0379084 -0.0379111 0.125728 0 -0 0</pose>
+        <mass>0.118046</mass>
         <inertia>
-          <ixx>3.23133e-05</ixx>
-          <ixy>-3.79193e-06</ixy>
-          <ixz>-1.78769e-06</ixz>
-          <iyy>3.23045e-05</iyy>
-          <iyz>-1.79017e-06</iyz>
-          <izz>4.19118e-05</izz>
+          <ixx>2.64775e-05</ixx>
+          <ixy>-4.18249e-06</ixy>
+          <ixz>-1.81535e-06</ixz>
+          <iyy>2.64687e-05</iyy>
+          <iyz>-1.81818e-06</iyz>
+          <izz>4.20235e-05</izz>
         </inertia>
       </inertial>
       <collision name='r_shoulder_in_up_collision'>
-        <pose>0 0 0.137527 0 -0 0</pose>
+        <pose>0 0 0.141027 0 -0 0</pose>
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
@@ -904,7 +1206,7 @@
         </geometry>
       </collision>
       <collision name='r_shoulder_in_up_collision_r_shoulder_in_up_1'>
-        <pose>-0.0388909 -0.0388909 0.123227 -3.14159 -0 -0.785398</pose>
+        <pose>-0.0388909 -0.0388909 0.126727 -3.14159 -0 -0.785398</pose>
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
@@ -912,17 +1214,8 @@
           </mesh>
         </geometry>
       </collision>
-      <collision name='r_shoulder_in_up_collision_r_shoulder_in_up_2'>
-        <pose>2.48412e-14 -9.4369e-15 0.137527 -6.05771e-14 -1.46246e-13 -3.13219e-27</pose>
-        <geometry>
-          <mesh>
-            <scale>0.001 0.001 0.001</scale>
-            <uri>model://athletebot/meshes/r_shoulder_in_lower_part_prt.stl</uri>
-          </mesh>
-        </geometry>
-      </collision>
       <visual name='r_shoulder_in_up_visual'>
-        <pose>0 0 0.137527 0 -0 0</pose>
+        <pose>0 0 0.141027 0 -0 0</pose>
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
@@ -931,20 +1224,11 @@
         </geometry>
       </visual>
       <visual name='r_shoulder_in_up_visual_r_shoulder_in_up_1'>
-        <pose>-0.0388909 -0.0388909 0.123227 -3.14159 -0 -0.785398</pose>
+        <pose>-0.0388909 -0.0388909 0.126727 -3.14159 -0 -0.785398</pose>
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
             <uri>model://athletebot/meshes/ftsensor45a_asm.stl</uri>
-          </mesh>
-        </geometry>
-      </visual>
-      <visual name='r_shoulder_in_up_visual_r_shoulder_in_up_2'>
-        <pose>2.48412e-14 -9.4369e-15 0.137527 -6.05771e-14 -1.46246e-13 -3.13219e-27</pose>
-        <geometry>
-          <mesh>
-            <scale>0.001 0.001 0.001</scale>
-            <uri>model://athletebot/meshes/r_shoulder_in_lower_part_prt.stl</uri>
           </mesh>
         </geometry>
       </visual>
@@ -969,18 +1253,79 @@
         <use_parent_model_frame>1</use_parent_model_frame>
       </axis>
     </joint>
-    <link name='r_humerous'>
-      <pose>-0.055 0.498 0.19 -1.58043e-12 5.55112e-17 3.52313e-12</pose>
+    <link name='r_shoulder_in_low'>
+      <pose>-4.7741e-13 0.572 0.19 -1.5708 -0.785398 2.06703e-13</pose>
       <inertial>
-        <pose>0.0131526 -0.155324 -0.017315 0 -0 0</pose>
-        <mass>0.03366</mass>
+        <pose>-0.0388216 -0.0388217 -0.061047 0 -0 0</pose>
+        <mass>0.00263007</mass>
         <inertia>
-          <ixx>0.000303096</ixx>
-          <ixy>1.66024e-05</ixy>
-          <ixz>-6.79104e-06</ixz>
-          <iyy>3.37422e-05</iyy>
-          <iyz>1.57056e-06</iyz>
-          <izz>0.000315904</izz>
+          <ixx>1.52173e-06</ixx>
+          <ixy>1.44976e-07</ixy>
+          <ixz>-4.293e-09</ixz>
+          <iyy>1.52173e-06</iyy>
+          <iyz>-4.29116e-09</iyz>
+          <izz>5.9826e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='r_shoulder_in_low_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://athletebot/meshes/r_shoulder_in_lower_part_prt.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='r_shoulder_in_low_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://athletebot/meshes/r_shoulder_in_lower_part_prt.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='r_shoulder_fixed' type='revolute'>
+      <child>r_shoulder_in_low</child>
+      <parent>r_shoulder_in_up</parent>
+      <axis>
+        <xyz>0.707107 1.46216e-13 0.707107</xyz>
+        <limit>
+          <lower>0</lower>
+          <upper>0</upper>
+          <effort>50000</effort>
+          <velocity>0.0001</velocity>
+        </limit>
+        <dynamics>
+          <damping>0.1</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+      <sensor name='right_arm_ft' type='force_torque'>
+        <always_on>1</always_on>
+        <update_rate>100</update_rate>
+        <pose>0 0 0 0 0 0</pose>
+	<plugin name='ftsensor_right_arm' filename='libgazebo_yarp_forcetorque.so'>
+	  <yarpConfigurationFile>model://athletebot/conf/FT/athletebot_right_arm_ft.ini</yarpConfigurationFile>
+	</plugin>
+      </sensor>
+    </joint>
+    <link name='r_humerous'>
+      <pose>-0.055 0.498 0.19 -1.58032e-12 2.78388e-24 3.52318e-12</pose>
+      <inertial>
+        <pose>0.0123455 -0.148145 -0.017689 0 -0 0</pose>
+        <mass>0.0320778</mass>
+        <inertia>
+          <ixx>0.000293525</ixx>
+          <ixy>2.02429e-05</ixy>
+          <ixz>-6.42827e-06</ixz>
+          <iyy>3.20518e-05</iyy>
+          <iyz>1.70984e-06</iyz>
+          <izz>0.000304706</izz>
         </inertia>
       </inertial>
       <collision name='r_humerous_collision'>
@@ -1004,9 +1349,9 @@
     </link>
     <joint name='r_shoulder_roll' type='revolute'>
       <child>r_humerous</child>
-      <parent>r_shoulder_in_up</parent>
+      <parent>r_shoulder_in_low</parent>
       <axis>
-        <xyz>1 3.52313e-12 -5.55112e-17</xyz>
+        <xyz>1 3.52318e-12 -2.78388e-24</xyz>
         <limit>
           <lower>-1.5708</lower>
           <upper>1.5708</upper>
@@ -1023,17 +1368,17 @@
       </axis>
     </joint>
     <link name='r_forearm'>
-      <pose>8.66189e-13 0.198 0.107379 -1.58043e-12 5.55112e-17 3.52313e-12</pose>
+      <pose>8.54115e-13 0.198 0.107379 -1.58032e-12 2.78388e-24 3.52318e-12</pose>
       <inertial>
-        <pose>-0.0145878 -0.157939 0.08122 0 -0 0</pose>
-        <mass>0.00562639</mass>
+        <pose>-0.0135034 -0.145081 0.080615 0 -0 0</pose>
+        <mass>0.00613751</mass>
         <inertia>
-          <ixx>9.9794e-05</ixx>
-          <ixy>-2.14183e-06</ixy>
-          <ixz>5.77187e-08</ixz>
-          <iyy>1.97858e-06</iyy>
-          <iyz>1.17545e-06</iyz>
-          <izz>9.89068e-05</izz>
+          <ixx>0.000111157</ixx>
+          <ixy>-3.11283e-06</ixy>
+          <ixz>1.11372e-07</ixz>
+          <iyy>2.18322e-06</iyy>
+          <iyz>1.71897e-06</iyz>
+          <izz>0.000110384</izz>
         </inertia>
       </inertial>
       <collision name='r_forearm_collision'>
@@ -1059,10 +1404,10 @@
       <child>r_forearm</child>
       <parent>r_humerous</parent>
       <axis>
-        <xyz>-5.55111e-17 -1.58043e-12 -1</xyz>
+        <xyz>2.78388e-24 -1.58032e-12 -1</xyz>
         <limit>
-          <lower>-1.57</lower>
-          <upper>1.57</upper>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
         </limit>
         <dynamics>
           <damping>0.1</damping>
@@ -1073,21 +1418,18 @@
         <use_parent_model_frame>1</use_parent_model_frame>
       </axis>
     </joint>
+    <static>0</static>
     <plugin name='controlboard_right_arm' filename='libgazebo_yarp_controlboard.so'>
       <yarpConfigurationFile>model://athletebot/conf/athletebot_right_arm.ini</yarpConfigurationFile>
-      <initialConfiguration>0 0 0 0</initialConfiguration>    
     </plugin>
     <plugin name='controlboard_right_leg' filename='libgazebo_yarp_controlboard.so'>
       <yarpConfigurationFile>model://athletebot/conf/athletebot_right_leg.ini</yarpConfigurationFile>
-      <initialConfiguration>0 0 0 0</initialConfiguration>        
     </plugin>
     <plugin name='controlboard_left_arm' filename='libgazebo_yarp_controlboard.so'>
       <yarpConfigurationFile>model://athletebot/conf/athletebot_left_arm.ini</yarpConfigurationFile>
-      <initialConfiguration>0 0 0 0</initialConfiguration>            
     </plugin>
     <plugin name='controlboard_left_leg' filename='libgazebo_yarp_controlboard.so'>
       <yarpConfigurationFile>model://athletebot/conf/athletebot_left_leg.ini</yarpConfigurationFile>
-      <initialConfiguration>0 0 0 0</initialConfiguration>            
     </plugin>
   </model>
 </sdf>

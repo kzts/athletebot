@@ -1,0 +1,9 @@
+[include "../athletebot_robotname.ini"]
+
+robotName ${gazeboYarpPluginsRobotName}
+deviceId left_foot
+period 10
+
+device analogServer
+#device gazebo_controlboard
+subdevice gazebo_forcetorque
